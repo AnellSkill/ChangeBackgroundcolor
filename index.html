@@ -1,14 +1,49 @@
+<!DOCTYPE html>
+<html>
 <head>
-  <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <button onclick="changeBackgroundColor" id="button">Dark Mode</button>
+    <button id="modeButton" onclick="changeBackground()">Dark Mode</button>
+  <script>
+    let darkMode = false;
+    function changeBackground() {
+      let changeBodyBackground = document.body;
+      let divone = document.getElementById("peak");
+      let divtwo = document.getElementById("peaky");
+      let button = document.getElementById("modeButton");
+
+      if (!darkMode) {
+        changeBodyBackground.style.backgroundColor = "#230037";
+        changeBodyBackground.style.color = "#FFF";
+        divone.style.backgroundColor = "#FFFB00";
+        divtwo.style.backgroundColor = "#2D0046";
+        button.innerHTML = "Light Mode";
+        button.style.backgroundColor = "#2D0046";
+        button.style.borderColor = "#FFFB00";
+        button.style.color = "#FFFB00";
+        darkMode = true;
+      } else {
+        changeBodyBackground.style.backgroundColor = "#f5f5f5";
+        changeBodyBackground.style.color = "#2D0046";
+        divone.style.backgroundColor = "#f5f5f5";
+        divtwo.style.backgroundColor = "#2D0046";
+        button.innerHTML = "Dark Mode";
+        button.style.backgroundColor = "#FFF";
+        button.style.borderColor = "#2D0046";
+        button.style.color = "#2D0046";
+        darkMode = false;
+      }
+    }
+  </script>
+
   <div id="peaky">
     <div id="peak">
-      <h1 class="title">We are peaky blinders</h1>
+      <h1 class="title">We are Peaky Blinders</h1>
       <h3 class="title">Our leader is Tommy Shelby</h3>
-      <h6 class="title">Join to us for win</h6>
-      <img class="digiLogo" src="peaky.jpg" alt="The Peaky Blinders">
+      <h6 class="title">Join us to win</h6>
+      <img id="digiLogo" src="peaky.jpg" alt="The Peaky Blinders">
     </div>
   </div>
 </body>
+</html>

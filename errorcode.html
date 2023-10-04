@@ -1,0 +1,38 @@
+<head>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <script>
+  function changeBackground() {
+    if (!darkMode) {
+      changeBodyBackground.style.background = "#230037";
+      changeBodyBackground.style.color = "#FFF";
+      divone.style.backgroundColor = "#FFFB00";
+      divtwo.style.backgroundColor = "#2D0046";
+      button.innerHTML = "Light Mode";
+      button.style.background = "#767676";
+      button.style.color = "#000";
+      button.style.borderColor = "#FFFB00";
+      darkMode = true;
+    } else {
+      changeBodyBackground.style.background = "#FFFFFF";
+      changeBodyBackground.style.color = "#2D0046";
+      divone.style.backgroundColor = "#2D0046";
+      divtwo.style.backgroundColor = "#FFFFFF";
+      button.innerHTML = "Dark Mode";
+      button.style.background = "#000";
+      button.style.color = "#fff";
+      darkMode = false;
+    }
+  }
+    </script>
+      <button onclick="changeBackgroundColor" id="button">Dark Mode</button>
+    <div id="peaky">
+      <div id="peak">
+        <h1 class="title">We are peaky blinders</h1>
+        <h3 class="title">Our leader is Tommy Shelby</h3>
+        <h6 class="title">Join to us for win</h6>
+        <img class="digiLogo" src="peaky.jpg" alt="The Peaky Blinders">
+      </div>
+    </div>
+  </body>
